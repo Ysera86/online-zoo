@@ -85,7 +85,7 @@ h1{
     color: #FFFFFF;
 
     border: 1.18841px solid #FFFFFF;
-    z-index: 99;
+    z-index: 9999999;
 }
 
 /* bamboo pic */
@@ -103,7 +103,7 @@ h1{
     background: #FFF;
     border: 1.18841px solid #FFF;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
-    z-index: 299;
+    z-index: 99999999;
 }
 
 
@@ -115,6 +115,7 @@ nav{
     height: 80px;
     width: 1380px;
     padding-left: 220px;
+    z-index: 999999;
 }
 nav li{
     list-style: none;
@@ -305,6 +306,29 @@ input[type=submit]:focus{
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
+
+
+.left-arrow, .right-arrow{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+.left-arrow:active,  .right-arrow:active{
+    background: #4B9200;
+}
+
+.left-arrow{
+    background-image: url(../../assets/icons/orange-left-arrow.png);
+    margin: 426px 20px 426px 0;
+    display: inline-block;
+}
+.right-arrow{
+    background-image: url(../../assets/icons/orange-right-arrow.png);
+    margin: 426px 0 426px 20px;
+}
+
+
 .cards{
     display: flex;
     flex-direction: row;
@@ -342,6 +366,7 @@ input[type=submit]:focus{
     height: 426px;
 
     border-radius: 5px;
+    border: 1px solid #FE9013;
 }
 
 .palm-foto{
@@ -369,13 +394,19 @@ input[type=submit]:focus{
 .left-arrow, .right-arrow{
     width: 62px;
     height: 62px;
+    position: absolute;
+    top: 1503px;
 }
 
 .left-arrow{
     margin-right: 20px;
+    /* left: 138px; */
+    left: calc(50% - 1600px/2 - 62px);
 }
 .right-arrow{
     margin-left: 20px;
+    /* left: 1398px; */
+    right: calc(50% - 1600px/2 - 62px);
 }
 
 
@@ -386,6 +417,16 @@ input[type=submit]:focus{
     height: 1004px;
 }
 
+.fill-bg{
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+}
+.fb{
+    /* width: 16px;
+    height: 16px; */
+}
 
 footer{
     width: 1600px;
@@ -396,7 +437,8 @@ footer{
     background-color: #000;
     color: #FFF;
     display: inline-block;
-    bottom: 0;
+    position: absolute;
+    top: 6000px;
     /* text-align: center; */
 }
 footer a{
